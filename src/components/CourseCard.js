@@ -1,12 +1,19 @@
-// components/CourseCard.js
 export default function CourseCard({ course }) {
-    return (
-      <div className="border p-4 rounded shadow">
-        <h3 className="text-xl font-bold">{course.title}</h3>
-        <p className="mt-2">{course.description}</p>
-        <p className="mt-2 font-bold">Fee: {course.fee}</p>
-        <button className="bg-blue-500 text-white px-4 py-2 mt-4">Register</button>
+  return (
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">{course.title}</h3>
+        <p className="text-gray-600 mb-4">{course.description}</p>
+        <p className="text-lg font-semibold text-gray-900">{course.fee}</p>
       </div>
-    );
-  }
-  
+      <div className="bg-gray-100 p-4 text-center">
+        <a
+          href="#"
+          className="text-blue-500 hover:underline"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  );
+}
